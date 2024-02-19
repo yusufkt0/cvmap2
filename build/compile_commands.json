@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/yasfur/Documents/cvmap++/build",
+  "command": "/usr/bin/clang++ -isystem /usr/local/include/opencv4 -g -o CMakeFiles/cvmap++.dir/src/main.cpp.o -c /home/yasfur/Documents/cvmap++/src/main.cpp",
+  "file": "/home/yasfur/Documents/cvmap++/src/main.cpp",
+  "output": "CMakeFiles/cvmap++.dir/src/main.cpp.o"
+}
+]
