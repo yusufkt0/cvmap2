@@ -14,7 +14,7 @@ int main(){
     
     VideoCapture cap(0, CAP_V4L2);
     if(!cap.isOpened()){
-        std::cout << "nah";
+        
 
     }
     namedWindow("window",WINDOW_NORMAL);
@@ -32,5 +32,13 @@ int main(){
         adaptiveThreshold(gray, threshed, 255, cv::ADAPTIVE_THRESH_MEAN_C, cv::THRESH_BINARY, 11, 2);    
         imshow("n",frame);
         imshow("t",threshed);
+
+        if (cv::waitKey(1) == 27) {
+            break;
+        }
     }
+    cap.release();
+    destroyAllWindows();
+
+    return 0;
 }
