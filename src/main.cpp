@@ -11,15 +11,7 @@
 using namespace cv;
 int main(){
     std::cout << CV_VERSION;
-    VideoCapture cap;
-    while (!cap.isOpened()){
-        int n = 0;
-        VideoCapture cap(n,CAP_V4L2);
-        n+=1;
-        if (n==5) {
-            return 0;
-        }
-    }
+    VideoCapture cap(0, CAP_V4L2);
     if(!cap.isOpened()){
         
 
