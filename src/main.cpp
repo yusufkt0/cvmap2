@@ -14,7 +14,7 @@ int main(){
     VideoCapture cap;
     while (!cap.isOpened()){
         int n = 0;
-        VideoCapture cap(n, CAP_V4L2);
+        VideoCapture cap(n,CAP_V4L2);
         n+=1;
         if (n==5) {
             return 0;
