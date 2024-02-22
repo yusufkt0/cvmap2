@@ -11,8 +11,12 @@
 using namespace cv;
 int main(){
     std::cout << CV_VERSION;
-    
-    VideoCapture cap(0, CAP_V4L2);
+    VideoCapture cap;
+    while (!cap.isOpened()){
+        int n = 0;
+        VideoCapture cap(n, CAP_V4L2);
+        n+=1;
+    }
     if(!cap.isOpened()){
         
 
@@ -33,7 +37,7 @@ int main(){
         imshow("n",frame);
         imshow("t",threshed);
 
-        if (cv::waitKey(1) == 27) {
+        if (cv::waitKey(0) == 27) {
             break;
         }
     }
