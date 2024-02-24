@@ -13,7 +13,8 @@ int main(){
     std::cout << CV_VERSION;
     VideoCapture cap(0, CAP_V4L2);
     if(!cap.isOpened()){
-        
+        std::cerr << "nto opned";
+        return 0;
 
     }
     namedWindow("window",WINDOW_NORMAL);
