@@ -12,6 +12,8 @@ int main(){
     VideoCapture cap(0, CAP_V4L2);
     if(!cap.isOpened()){
         std::cerr << "nto opned";
+        cap.release();
+        destroyAllWindows();
         return 0;
 
     }
