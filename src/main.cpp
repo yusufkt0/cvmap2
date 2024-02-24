@@ -27,7 +27,8 @@ int main(){
         Mat gray;
         cvtColor(frame, gray, COLOR_BGR2GRAY);
         Mat threshed;        
-        adaptiveThreshold(gray, threshed, 255, cv::ADAPTIVE_THRESH_MEAN_C, cv::THRESH_BINARY, 11, 2);    
+        adaptiveThreshold(gray, threshed, 255,cv::ADAPTIVE_THRESH_MEAN_C,
+                                             cv::THRESH_BINARY, 11, 2);    
         imshow("raw cam",frame);
         imshow("ad. threshed",threshed);
 
