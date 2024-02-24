@@ -30,8 +30,8 @@ int main(){
         cvtColor(frame, gray, COLOR_BGR2GRAY);
         Mat threshed;        
         adaptiveThreshold(gray, threshed, 255, cv::ADAPTIVE_THRESH_MEAN_C, cv::THRESH_BINARY, 11, 2);    
-        imshow("n",frame);
-        imshow("t",threshed);
+        imshow("raw cam",frame);
+        imshow("ad. threshed",threshed);
 
         if (cv::waitKey(0) == 27 || cv::waitKey(0) == 'q') {
             break;
