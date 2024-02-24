@@ -1,6 +1,4 @@
 #include <iostream>
-#include <opencv4/opencv2/videoio.hpp>
-#include <ostream>
 #include "opencv2/opencv.hpp"
 #include "opencv2/core/version.hpp"
 #include "opencv2/highgui.hpp"
