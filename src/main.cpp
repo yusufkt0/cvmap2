@@ -23,7 +23,7 @@ int main(){
         Mat frame;
         cap >> frame;
         if (frame.empty()) {
-            std::cerr << "nggr" << std::endl;
+            std::cerr << "empty frame" << std::endl;
             break;
         }
         Mat gray;
