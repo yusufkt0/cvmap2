@@ -33,7 +33,7 @@ int main(){
         imshow("n",frame);
         imshow("t",threshed);
 
-        if (cv::waitKey(0) == 27) {
+        if (cv::waitKey(0) == 27 || cv::waitKey(0) == 'q') {
             break;
         }
     }
