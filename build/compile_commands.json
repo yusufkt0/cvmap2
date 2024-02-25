@@ -10,5 +10,11 @@
   "command": "/usr/bin/clang++ -isystem /usr/local/include/opencv4 -g -o CMakeFiles/cvmap++.dir/src/map.cpp.o -c /home/yasfur/Documents/cvmap++/src/map.cpp",
   "file": "/home/yasfur/Documents/cvmap++/src/map.cpp",
   "output": "CMakeFiles/cvmap++.dir/src/map.cpp.o"
+},
+{
+  "directory": "/home/yasfur/Documents/cvmap++/build",
+  "command": "/usr/bin/clang++ -isystem /usr/local/include/opencv4 -g -o CMakeFiles/cvmap++.dir/src/cam.cpp.o -c /home/yasfur/Documents/cvmap++/src/cam.cpp",
+  "file": "/home/yasfur/Documents/cvmap++/src/cam.cpp",
+  "output": "CMakeFiles/cvmap++.dir/src/cam.cpp.o"
 }
 ]

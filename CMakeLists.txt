@@ -8,8 +8,10 @@ find_package( OpenCV REQUIRED )
 add_executable(cvmap++
     src/main.cpp
     src/map.cpp
-    include/main.h
-    include/map.h
+    src/cam.cpp
+    include/main.hpp
+    include/map.hpp
+    include/cam.hpp
 )
 
 target_link_libraries(cvmap++ ${OpenCV_LIBRARIES})
