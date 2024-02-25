@@ -10,7 +10,7 @@ int main() {
         std::cerr << "Error: Could not open camera." << std::endl;
         return -1;
     }
-    
+
     while (true) {
         cv::Mat frame;
         // Capture a frame from the camera
@@ -26,10 +26,12 @@ int main() {
         cv::Mat gray;
         cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
 
-        // Apply adaptive thresholding
+        // Apply adaptive thresholding with adjusted parameters
         cv::Mat thresholded;
+        int blockSize = 15; // Adjust the blockSize parameter
+        int C = 5;          // Adjust the C parameter
         cv::adaptiveThreshold(gray, thresholded, 255,
-         cv::ADAPTIVE_THRESH_MEAN_C, cv::THRESH_BINARY, 11, 2);
+                              cv::ADAPTIVE_THRESH_MEAN_C, cv::THRESH_BINARY, blockSize, C);
 
         // Display the original and thresholded frames
         cv::imshow("Camera Feed", frame);
