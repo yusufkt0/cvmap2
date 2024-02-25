@@ -1,5 +1,5 @@
-#include "../include/cam.hpp"
-#include "../include/map.hpp"
+#include "cam.hpp"
+#include "map.hpp"
 
 int main() {
     
