@@ -10,10 +10,7 @@ int main() {
         std::cerr << "Error: Could not open camera." << std::endl;
         return -1;
     }
-
-    // Create a window to display the camera feed
-    cv::namedWindow("Camera Feed", cv::WINDOW_NORMAL);
-
+    
     while (true) {
         cv::Mat frame;
         // Capture a frame from the camera
