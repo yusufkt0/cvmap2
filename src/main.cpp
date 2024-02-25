@@ -1,43 +1,52 @@
-#include <iostream>
-#include "opencv2/opencv.hpp"
-#include "opencv2/core/version.hpp"
-#include "opencv2/highgui.hpp"
-#include "opencv2/imgproc.hpp"
-#include "opencv2/opencv.hpp"
-#include "opencv2/videoio.hpp"
+#include <opencv2/opencv.hpp>
+#include <opencv2/videoio.hpp>
 
-using namespace cv;
-int main(){
-    std::cout << CV_VERSION;
-    VideoCapture cap(1, CAP_V4L2);
-    if(!cap.isOpened()){
-        std::cerr << "cam not opened";
-        cap.release();
-        destroyAllWindows();
-        return 0;
+int main() {
+    // Open a video capture object (camera index 0 by default)
+    cv::VideoCapture cap(0, cv::CAP_V4L2);
 
+    // Check if the camera opened successfully
+    if (!cap.isOpened()) {
+        std::cerr << "Error: Could not open camera." << std::endl;
+        return -1;
     }
+
+    // Create a window to display the camera feed
+    cv::namedWindow("Camera Feed", cv::WINDOW_NORMAL);
+
     while (true) {
-        Mat frame;
+        cv::Mat frame;
+        // Capture a frame from the camera
         cap >> frame;
+
+        // Check if the frame is empty (end of video stream)
         if (frame.empty()) {
-            std::cerr << "empty frame" << std::endl;
+            std::cerr << "Error: Empty frame." << std::endl;
             break;
         }
-        Mat gray;
-        cvtColor(frame, gray, COLOR_BGR2GRAY);
-        Mat threshed;        
-        adaptiveThreshold(gray, threshed, 255,cv::ADAPTIVE_THRESH_MEAN_C,
-                                             cv::THRESH_BINARY, 11, 2);    
-        imshow("raw cam",frame);
-        imshow("ad. threshed",threshed);
 
-        if (cv::waitKey(0) == 27 || cv::waitKey(0) == 'q') {
+        // Convert the frame to grayscale
+        cv::Mat gray;
+        cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
+
+        // Apply adaptive thresholding
+        cv::Mat thresholded;
+        cv::adaptiveThreshold(gray, thresholded, 255,
+         cv::ADAPTIVE_THRESH_MEAN_C, cv::THRESH_BINARY, 11, 2);
+
+        // Display the original and thresholded frames
+        cv::imshow("Camera Feed", frame);
+        cv::imshow("Adaptive Threshold", thresholded);
+
+        // Check for the 'ESC' key to exit the loop
+        if (cv::waitKey(1) == 'q') {
             break;
         }
     }
+
+    // Release the video capture object and close windows
     cap.release();
-    destroyAllWindows();
+    cv::destroyAllWindows();
 
     return 0;
 }

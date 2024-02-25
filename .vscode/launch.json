@@ -3,13 +3,13 @@
   "configurations": [
     {
       "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
+      "type": "lldb",
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
       "cwd": "/home/yasfur/Documents/cvmap++",
-      "program": "/home/yasfur/Documents/cvmap++/build/Debug/outDebug",
+      "program": "/home/yasfur/Documents/cvmap++/build/cvmap++",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
