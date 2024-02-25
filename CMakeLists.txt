@@ -4,7 +4,7 @@ project(cvmap++)
 
 SET("OpenCV_DIR" "/usr/share/OpenCV")
 find_package( OpenCV REQUIRED )
-
+include_directories(include/)
 add_executable(cvmap++
     src/main.cpp
     src/map.cpp

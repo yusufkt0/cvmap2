@@ -52,21 +52,21 @@ build cmake_object_order_depends_target_cvmap++: phony || CMakeFiles/cvmap++.dir
 build CMakeFiles/cvmap++.dir/src/main.cpp.o: CXX_COMPILER__cvmap.2b.2b_unscanned_Debug /home/yasfur/Documents/cvmap++/src/main.cpp || cmake_object_order_depends_target_cvmap++
   DEP_FILE = CMakeFiles/cvmap++.dir/src/main.cpp.o.d
   FLAGS = -g
-  INCLUDES = -isystem /usr/local/include/opencv4
+  INCLUDES = -I/home/yasfur/Documents/cvmap++/include -isystem /usr/local/include/opencv4
   OBJECT_DIR = CMakeFiles/cvmap++.dir
   OBJECT_FILE_DIR = CMakeFiles/cvmap++.dir/src
 
 build CMakeFiles/cvmap++.dir/src/map.cpp.o: CXX_COMPILER__cvmap.2b.2b_unscanned_Debug /home/yasfur/Documents/cvmap++/src/map.cpp || cmake_object_order_depends_target_cvmap++
   DEP_FILE = CMakeFiles/cvmap++.dir/src/map.cpp.o.d
   FLAGS = -g
-  INCLUDES = -isystem /usr/local/include/opencv4
+  INCLUDES = -I/home/yasfur/Documents/cvmap++/include -isystem /usr/local/include/opencv4
   OBJECT_DIR = CMakeFiles/cvmap++.dir
   OBJECT_FILE_DIR = CMakeFiles/cvmap++.dir/src
 
 build CMakeFiles/cvmap++.dir/src/cam.cpp.o: CXX_COMPILER__cvmap.2b.2b_unscanned_Debug /home/yasfur/Documents/cvmap++/src/cam.cpp || cmake_object_order_depends_target_cvmap++
   DEP_FILE = CMakeFiles/cvmap++.dir/src/cam.cpp.o.d
   FLAGS = -g
-  INCLUDES = -isystem /usr/local/include/opencv4
+  INCLUDES = -I/home/yasfur/Documents/cvmap++/include -isystem /usr/local/include/opencv4
   OBJECT_DIR = CMakeFiles/cvmap++.dir
   OBJECT_FILE_DIR = CMakeFiles/cvmap++.dir/src
 

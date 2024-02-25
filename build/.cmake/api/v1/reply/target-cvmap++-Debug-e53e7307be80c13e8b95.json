@@ -11,7 +11,8 @@
 		"commands" : 
 		[
 			"add_executable",
-			"target_link_libraries"
+			"target_link_libraries",
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -33,6 +34,12 @@
 				"file" : 0,
 				"line" : 17,
 				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
 			}
 		]
 	},
@@ -47,6 +54,10 @@
 			],
 			"includes" : 
 			[
+				{
+					"backtrace" : 3,
+					"path" : "/home/yasfur/Documents/cvmap++/include"
+				},
 				{
 					"backtrace" : 2,
 					"isSystem" : true,
