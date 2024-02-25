@@ -9,7 +9,7 @@
 using namespace cv;
 int main(){
     std::cout << CV_VERSION;
-    VideoCapture cap(0, CAP_V4L2);
+    VideoCapture cap(1, CAP_V4L2);
     if(!cap.isOpened()){
         std::cerr << "cam not opened";
         cap.release();
@@ -17,8 +17,6 @@ int main(){
         return 0;
 
     }
-    namedWindow("window",WINDOW_NORMAL);
-
     while (true) {
         Mat frame;
         cap >> frame;
