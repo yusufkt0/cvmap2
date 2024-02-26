@@ -7,4 +7,5 @@
 int videoStream(int index, std::string backend){
     cv::VideoCapture cap(int index,std::string backend);
     cv::Mat frame;
+    return 0;
 }
