@@ -2,7 +2,10 @@
 #include <iostream>
 #include <opencv2/core/mat.hpp>
 #include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
 #include <opencv2/videoio.hpp>
+#include <opencv2/opencv.hpp>
+#include <opencv2/opencv_modules.hpp>
 
 
 int main(){
@@ -18,8 +21,21 @@ int main(){
             std::cerr << "frame empty";
         
         }
-        cv::imshow("",frame);
+        cv::Mat gray;
+        cv::Mat thres;
+        cv::Mat canny;
+
+        cv::cvtColor(frame, gray , cv::COLOR_BGR2GRAY);
+        cv::adaptiveThreshold(gray, thres, 20, cv::ADAPTIVE_THRESH_MEAN_C, cv::THRESH_BINARY,11, 4);
+        cv::Canny(thres,canny,50,128);
+
+        
+        cv::imshow("",canny);
+
+        if (cv::waitKey(0)=='q') {break;}
     }
+    cap.release();
+    cv::destroyAllWindows();
 
 
 }
