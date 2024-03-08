@@ -29,7 +29,7 @@ int main(){
         cv::adaptiveThreshold(gray, thres, 20, cv::ADAPTIVE_THRESH_MEAN_C, cv::THRESH_BINARY,11, 4);
         cv::Canny(thres,canny,50,128);
 
-        
+            
         cv::imshow("",canny);
 
         if (cv::waitKey(0)=='q') {break;}
