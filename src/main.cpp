@@ -27,7 +27,7 @@ int main(){
 
         cv::cvtColor(frame, gray , cv::COLOR_BGR2GRAY);
         cv::adaptiveThreshold(gray, thres, 20, cv::ADAPTIVE_THRESH_MEAN_C, cv::THRESH_BINARY,11, 4);
-        cv::Canny(thres,canny,50,128);
+        cv::Canny(thres,canny,0,250);
 
             
         cv::imshow("",thres);
