@@ -30,9 +30,9 @@ int main(){
         cv::Canny(thres,canny,50,128);
 
             
-        cv::imshow("",canny);
+        cv::imshow("",thres);
 
-        if (cv::waitKey(0)=='q') {break;}
+        if (cv::waitKey(1)=='q') {break;}
     }
     cap.release();
     cv::destroyAllWindows();
