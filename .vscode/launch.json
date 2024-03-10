@@ -6,19 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "stopAtEntry": false,
-      "externalConsole": false,
       "cwd": "/home/yasfur/Documents/cvmap++",
       "program": "/home/yasfur/Documents/cvmap++/build/cvmap++",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
     }
   ]
 }
