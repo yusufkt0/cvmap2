@@ -30,7 +30,7 @@ int main(){
         cv::Canny(thres,canny,0,255);
 
             
-        cv::imshow("",thres);
+        cv::imshow("",canny);
 
         if (cv::waitKey(1)=='q') {break;}
     }
